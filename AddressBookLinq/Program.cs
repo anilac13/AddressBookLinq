@@ -10,7 +10,7 @@ namespace AddressBookLinq
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nChoose option to perform \n1.Create Address book \n2.Retrieve records in descending order \n3.Skip last 3 records \n4.Exit");
+                Console.WriteLine("\nChoose option to perform \n1.Create Address book \n2.Retrieve records in descending order \n3.Skip last 3 records \n4.Get only FirstName,LastName,PhoneNumber \n5.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -33,6 +33,9 @@ namespace AddressBookLinq
                         main.SkipRecords(contacts);
                         break;
                     case 4:
+                        main.GetRecords(contacts);
+                        break;
+                    case 5:
                         flag = false;
                         break;
                 }

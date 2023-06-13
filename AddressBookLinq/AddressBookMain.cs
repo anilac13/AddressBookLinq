@@ -30,5 +30,15 @@ namespace AddressBookLinq
                     $"\t State:- {data.State} \t ZIP:- {data.ZIP} \t PhoneNumber:- {data.PhoneNumber} \t Email:- {data.Email}");
             }
         }
+        public void GetRecords(List<Contacts> contacts)
+        {
+            var records = (from contact in contacts
+                           select contact);
+            foreach (var data in records)
+            {
+                Console.WriteLine($"FirstName:- {data.FirstName} \t LastName:- {data.LastName} " +
+                    $"\t PhoneNumber:- {data.PhoneNumber}");
+            }
+        }
     }
 }
