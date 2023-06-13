@@ -9,7 +9,7 @@ namespace AddressBookLinq
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nChoose option to perform \n1.Create Address book \n2.Exit");
+                Console.WriteLine("\nChoose option to perform \n1.Create Address book \n2.Retrieve records in descending order \n3.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -26,6 +26,10 @@ namespace AddressBookLinq
                         }
                         break;
                     case 2:
+                        AddressBookMain main = new AddressBookMain();
+                        main.TopRecords(contacts);
+                        break;
+                    case 3:
                         flag = false;
                         break;
                 }
