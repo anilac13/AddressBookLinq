@@ -19,6 +19,11 @@ namespace AddressBookLinq
                         contacts.Add(new Contacts { FirstName = "Veena", LastName = "Kumari", Address = "Marathalli", City = "Bengaluru", State = "Karnataka", ZIP = "560065", PhoneNumber = "8906543217", Email = "veena@email.com" });
                         contacts.Add(new Contacts { FirstName = "Nan", LastName = "jeeva", Address = "Kadugodi", City = "Bengaluru", State = "Karnataka", ZIP = "560068", PhoneNumber = "7890632154", Email = "nan@email.com" });
                         contacts.Add(new Contacts { FirstName = "Soma", LastName = "Shekar", Address = "KGF", City = "Kolar", State = "Karnataka", ZIP = "563123", PhoneNumber = "7890165432", Email = "somu@email.com" });
+                        foreach (var data in contacts)
+                        {
+                            Console.WriteLine($"FirstName:- {data.FirstName} \t LastName:- {data.LastName} \t Address:- {data.Address} \t City:- {data.City}" +
+                                $"\t State:- {data.State} \t ZIP:- {data.ZIP} \t PhoneNumber:- {data.PhoneNumber} \t Email:- {data.Email}");
+                        }
                         break;
                     case 2:
                         flag = false;
