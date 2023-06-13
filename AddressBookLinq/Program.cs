@@ -6,10 +6,11 @@ namespace AddressBookLinq
         static void Main(string[] args)
         {
             List<Contacts> contacts = new List<Contacts>();
+            AddressBookMain main = new AddressBookMain();
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nChoose option to perform \n1.Create Address book \n2.Retrieve records in descending order \n3.Exit");
+                Console.WriteLine("\nChoose option to perform \n1.Create Address book \n2.Retrieve records in descending order \n3.Skip last 3 records \n4.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -26,10 +27,12 @@ namespace AddressBookLinq
                         }
                         break;
                     case 2:
-                        AddressBookMain main = new AddressBookMain();
                         main.TopRecords(contacts);
                         break;
                     case 3:
+                        main.SkipRecords(contacts);
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
